@@ -1,0 +1,30 @@
+# Ignore Eclipse project files
+.classpath
+.project
+.settings/
+
+# Ignore build files
+target/
+bin/
+build/
+
+# Ignore compiled Java files
+*.class
+
+# Ignore Maven and Gradle dependencies
+.m2/
+.gradle/
+
+# Ignore Tomcat and server logs
+logs/
+*.log
+work/
+temp/
+
+# Ignore IDE-specific files
+.idea/
+*.iml
+
+# Ignore sensitive files (if applicable)
+*.env
+*.properties
