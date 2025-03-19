@@ -21,8 +21,8 @@
 	<div class="container-fluid back-img">
 		<div class="text-center">
 			<h1 class="text-white"><i class="fa fa-book mr-1" aria-hidden="true"></i>NOTE-KEEPER: SAVE YOUR NOTES</h1>
-			<a herf="login.jsp" class="btn btn-light"><i class="fa fa-sign-in mr-1" aria-hidden="true"></i>Login</a> <a
-				herf="register.jsp" class="btn btn-light"><i class="fa fa-user-plus mr-1" aria-hidden="true"></i>Register</a>
+			<a href="login.jsp" class="btn btn-light"><i class="fa fa-sign-in mr-1" aria-hidden="true"></i>SignIn</a> <a
+				href="register.jsp" class="btn btn-light"><i class="fa fa-user-plus mr-1" aria-hidden="true"></i>Register</a>
 		</div>
 	</div>
 

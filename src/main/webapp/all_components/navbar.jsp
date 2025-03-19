@@ -7,7 +7,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#"><i class="fa fa-home mr-1" aria-hidden="true"></i>Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="index.jsp"><i class="fa fa-home mr-1" aria-hidden="true"></i>Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#"><i class="fa fa-plus mr-1" aria-hidden="true"></i>Add Notes</a>
@@ -17,8 +17,8 @@
       </li>
     </ul>
 
-    <a class="btn btn-light my-2 my-sm-0 mr-3" type="submit"><i class="fa fa-sign-in mr-1" aria-hidden="true"></i>Login</a>
-      <a class="btn btn-light my-2 my-sm-0" type="submit"><i class="fa fa-user-plus mr-1" aria-hidden="true"></i>Register</a>
+    <a href="login.jsp" class="btn btn-light my-2 my-sm-0 mr-3" type="submit"><i class="fa fa-sign-in mr-1" aria-hidden="true"></i>SingIn</a>
+      <a href="register.jsp" class="btn btn-light my-2 my-sm-0" type="submit"><i class="fa fa-user-plus mr-1" aria-hidden="true"></i>Register</a>
 
   </div>
 </nav>
