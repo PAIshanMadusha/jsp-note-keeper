@@ -19,26 +19,28 @@
 						<h4>Registration</h4>
 					</div>
 					<div class="card-body">
-						<form>
+						<form action="UserServlet" method="post">
 							<div class="form-group">
-							<label>Enter Your Full Name: </label>
-								<input type="text" class="form-control" id="exampleInputEmail1"
-									aria-describedby="emailHelp" placeholder="Full Name">
+								<label>Enter Your Full Name: </label> <input type="text"
+									class="form-control" id="exampleInputEmail1"
+									aria-describedby="emailHelp" name="fname"
+									placeholder="Full Name">
 
 							</div>
 							<div class="form-group">
-							<label>Enter Your Email: </label>
-								<input type="email" class="form-control" id="exampleInputEmail1"
-									aria-describedby="emailHelp" placeholder="Email">
+								<label>Enter Your Email: </label> <input type="email"
+									class="form-control" id="exampleInputEmail1"
+									aria-describedby="emailHelp" name="uemail" placeholder="Email">
 
 							</div>
 							<div class="form-group">
 								<label for="exampleInputPassword1">Enter Password: </label> <input
 									type="password" class="form-control" id="exampleInputPassword1"
-									placeholder="Password">
+									name="upassword" placeholder="Password">
 							</div>
 
-							<button type="submit" class="btn btn-primary badge-pill btn-block">Register</button>
+							<button type="submit"
+								class="btn btn-primary badge-pill btn-block">Register</button>
 						</form>
 					</div>
 				</div>
