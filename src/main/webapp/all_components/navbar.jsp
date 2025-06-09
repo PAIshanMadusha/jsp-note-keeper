@@ -17,7 +17,7 @@
       </li>
     </ul>
 
-    <a href="login.jsp" class="btn btn-light my-2 my-sm-0 mr-3" type="submit"><i class="fa fa-sign-in mr-1" aria-hidden="true"></i>SingIn</a>
+    <a href="login.jsp" class="btn btn-light my-2 my-sm-0 mr-3" type="submit"><i class="fa fa-sign-in mr-1" aria-hidden="true"></i>LogIn</a>
       <a href="register.jsp" class="btn btn-light my-2 my-sm-0" type="submit"><i class="fa fa-user-plus mr-1" aria-hidden="true"></i>Register</a>
 
   </div>

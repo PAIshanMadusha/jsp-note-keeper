@@ -15,23 +15,35 @@
 				<div class="card mt-5">
 					<div class="card-header text-center text-white bg-custom">
 						<i class="fa fa-sign-in fa-4x" aria-hidden="true"></i>
-						<h4>Sign-IN</h4>
+						<h4>LOG-IN</h4>
 					</div>
+
+					<%
+					String invalidMsg = (String) session.getAttribute("login-failed");
+
+					if (invalidMsg != null) {
+					%>
+					<div class="alert alert-danger" role="alert"><%= invalidMsg %></div>
+					<%
+					session.removeAttribute("login-failed");
+					}
+					%>
 					<div class="card-body">
-						<form>
+						<form action="LoginServlet" method="post">
 							<div class="form-group">
-							<label>Enter Your Email: </label>
-								<input type="email" class="form-control" id="exampleInputEmail1"
-									aria-describedby="emailHelp" placeholder="Email">
+								<label>Enter Your Email: </label> <input type="email"
+									class="form-control" id="exampleInputEmail1"
+									aria-describedby="emailHelp" placeholder="Email" name="uEmail">
 
 							</div>
 							<div class="form-group">
 								<label for="exampleInputPassword1">Enter Password: </label> <input
 									type="password" class="form-control" id="exampleInputPassword1"
-									placeholder="Password">
+									placeholder="Password" name="uPassword">
 							</div>
 
-							<button type="submit" class="btn btn-primary badge-pill btn-block">SignIn</button>
+							<button type="submit"
+								class="btn btn-primary badge-pill btn-block">Login</button>
 						</form>
 					</div>
 				</div>
