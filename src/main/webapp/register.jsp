@@ -17,6 +17,24 @@
 					<div class="card-header text-center text-white bg-custom">
 						<i class="fa fa-user-plus fa-4x" aria-hidden="true"></i>
 						<h4>Registration</h4>
+						<%
+						String regMsg = (String) session.getAttribute("reg-success");
+						if (regMsg != null) {
+						%>
+						<div class="alert alert-success" role="alert"><%= regMsg %> Login: <a href = "login.jsp">Click Here</a> </div>
+						<%
+						session.removeAttribute("reg-success");
+						}
+						%>
+						<%
+						String failedMsg = (String) session.getAttribute("failed-msg");
+						if (failedMsg != null) {
+						%>
+						<div class="alert alert-danger" role="alert"><%= failedMsg %></div>
+						<%
+						session.removeAttribute("failed-msg");
+						}
+						%>
 					</div>
 					<div class="card-body">
 						<form action="UserServlet" method="post">
