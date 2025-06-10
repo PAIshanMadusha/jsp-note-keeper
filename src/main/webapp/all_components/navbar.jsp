@@ -27,9 +27,54 @@
 		%>
 		<a href="" class="btn btn-light my-2 my-sm-0 mr-3" data-toggle="modal"
 			data-target="#exampleModal" type="submit"><i
-			class="fa fa-user-circle-o mr-1" aria-hidden="true"></i> <%= user.getName() %></a> 
-			<a href="#" class="btn btn-light my-2 my-sm-0"
-			type="submit"><i class="fa fa-sign-out mr-1" aria-hidden="true"></i>Logout</a>
+			class="fa fa-user-circle-o mr-1" aria-hidden="true"></i> <%=user.getName()%></a>
+		<a href="#" class="btn btn-light my-2 my-sm-0" type="submit"><i
+			class="fa fa-sign-out mr-1" aria-hidden="true"></i>Logout</a>
+
+		<!-- Modal -->
+		<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+			aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Profile Details</h5>
+						<button type="button" class="close" data-dismiss="modal"
+							aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<div class="container text-center">
+							<i class="fa fa-user fa-3x"></i>
+							<h5></h5>
+
+							<table class="table">
+								<tbody>
+									<tr>
+										<td>User ID:</td>
+										<td><%=user.getId()%></td>
+									</tr>
+
+									<tr>
+										<td>Full Name:</td>
+										<td><%=user.getName()%></td>
+									</tr>
+
+									<tr>
+										<td>Email:</td>
+										<td><%=user.getEmail()%></td>
+									</tr>
+								</tbody>
+							</table>
+							<div>
+								<button type="button" class="btn btn-primary"
+									data-dismiss="modal">Close</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 		<%
 		} else {
 		%>
@@ -40,27 +85,5 @@
 		<%
 		}
 		%>
-	</div>
-
-	<!-- Modal -->
-	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
-		aria-labelledby="exampleModalLabel" aria-hidden="true">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-					<button type="button" class="close" data-dismiss="modal"
-						aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
-				<div class="modal-body">...</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary"
-						data-dismiss="modal">Close</button>
-					<button type="button" class="btn btn-primary">Save changes</button>
-				</div>
-			</div>
-		</div>
 	</div>
 </nav>
