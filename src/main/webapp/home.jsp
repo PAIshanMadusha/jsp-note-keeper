@@ -5,8 +5,9 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<%@include file= "all_components/allcss.jsp"%>
 </head>
 <body>
- <h1>Home Page</h1>
+ <%@include file="all_components/navbar.jsp" %>
 </body>
 </html>
