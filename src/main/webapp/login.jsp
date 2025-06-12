@@ -23,11 +23,22 @@
 
 					if (invalidMsg != null) {
 					%>
-					<div class="alert alert-danger" role="alert"><%= invalidMsg %></div>
+					<div class="alert alert-danger" role="alert"><%=invalidMsg%></div>
 					<%
 					session.removeAttribute("login-failed");
 					}
 					%>
+
+					<%
+					String withoutLogin = (String) session.getAttribute("login-error");
+					if (withoutLogin != null) {
+					%>
+					<div class="alert alert-danger" role="alert"><%=withoutLogin%></div>
+					<%
+					session.removeAttribute("login-error");
+					}
+					%>
+
 					<div class="card-body">
 						<form action="LoginServlet" method="post">
 							<div class="form-group">

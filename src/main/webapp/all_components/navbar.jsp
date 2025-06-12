@@ -14,7 +14,7 @@
 			<li class="nav-item active"><a class="nav-link" href="index.jsp"><i
 					class="fa fa-home mr-1" aria-hidden="true"></i>Home <span
 					class="sr-only">(current)</span></a></li>
-			<li class="nav-item"><a class="nav-link" href="#"><i
+			<li class="nav-item"><a class="nav-link" href="addNotes.jsp"><i
 					class="fa fa-plus mr-1" aria-hidden="true"></i>Add Notes</a></li>
 			<li class="nav-item"><a class="nav-link" href="#"><i
 					class="fa fa-sticky-note mr-1" aria-hidden="true"></i>Show Notes</a></li>
