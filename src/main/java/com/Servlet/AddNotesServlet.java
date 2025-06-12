@@ -25,6 +25,7 @@ public class AddNotesServlet extends HttpServlet {
 		
 		if(f) {
 			System.out.print("Data Inserted Successfully!");
+			response.sendRedirect("showNotes.jsp");
 		}else {
 			System.out.print("Data Not Insered!");
 		}

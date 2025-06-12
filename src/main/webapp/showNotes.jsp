@@ -1,3 +1,7 @@
+<%@page import="java.util.List"%>
+<%@page import="com.Db.DBConnect"%>
+<%@page import="com.DAO.PostDAO"%>
+<%@page import="com.User.Post"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 
@@ -18,37 +22,47 @@ if (user3 == null) {
 </head>
 <body>
 	<%@include file="all_components/navbar.jsp"%>
-	<div class="container my-5">
-		<h2 class="text-center mb-4">📝 All Notes</h2>
-		<div class="row justify-content-center">
-			<div class="col-md-10 col-lg-8">
-				<div class="card shadow-lg border-0 rounded-4 overflow-hidden">
+	<div class="container  my-4">
+		<h2 class="text-center mb-4">📝 View Your All Notes</h2>
+		<div class="row">
+			<div class="col-md-12">
+				<%
+				if (user3 != null) {
+					PostDAO objectPost = new PostDAO(DBConnect.getConn());
+					List<Post> post = objectPost.getData(user3.getId());
+					for (Post onePost : post) {
+				%>
+				<div class="card shadow-lg border-1 rounded-4 overflow-hidden mt-3">
 					<div class="text-center bg-light py-3">
 						<img src="img/stickynote.png" alt="Sticky Note" class="img-fluid"
 							style="max-width: 80px;">
 					</div>
-					<div class="card-body p-5">
-						<h4 class="card-title text-primary font-weight-bold mb-3">Text
-							Data for Note Title</h4>
-						<p class="card-text text-dark mb-4">Text Data for Note
-							Content.</p>
+
+					<div class="card-body p-4">
+						<h5 class="card-title text-primary font-weight-bold mb-3"><%=onePost.getTitle()%></h5>
+						<p class="card-text text-dark mb-4"><%=onePost.getContent()%></p>
+
 
 						<ul class="list-unstyled mb-4">
-							<li><strong class="text-success">📅 Published Date:</strong>
-								<span>text data</span></li>
-							<li><strong class="text-success">👤 Published By:</strong> <span
-								class="text-primary">text data</span></li>
+							<li><strong class="text-primary">📅 Published Date:</strong>
+								<span><%=onePost.getpDate()%></span></li>
+							<li><strong class="text-primary">👤 Published By:</strong> <span><%=user3.getName()%></span></li>
 						</ul>
 
-						<div class="d-flex justify-content-center gap-3">
-							<a href="#" class="btn btn-outline-danger px-4 mr-3"> <i
+						<div class="container text-center mt-2">
+							<a href="#" class="btn btn-outline-danger mr-2 px-4"> <i
 								class="fa fa-trash mr-1"></i> Delete
 							</a> <a href="#" class="btn btn-outline-primary px-4"> <i
 								class="fa fa-edit mr-1"></i> Edit
 							</a>
 						</div>
+
 					</div>
 				</div>
+				<%
+				}
+				}
+				%>
 			</div>
 		</div>
 	</div>
