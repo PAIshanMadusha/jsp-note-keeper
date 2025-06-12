@@ -25,10 +25,11 @@
 
 		if (user != null) {
 		%>
-		<a href="" class="btn btn-light my-2 my-sm-0 mr-3" data-toggle="modal"
+		<a class="btn btn-light my-2 my-sm-0 mr-3" data-toggle="modal"
 			data-target="#exampleModal" type="submit"><i
 			class="fa fa-user-circle-o mr-1" aria-hidden="true"></i> <%=user.getName()%></a>
-		<a href="#" class="btn btn-light my-2 my-sm-0" type="submit"><i
+			
+		<a href="LogoutServlet" class="btn btn-light my-2 my-sm-0" type="submit"><i
 			class="fa fa-sign-out mr-1" aria-hidden="true"></i>Logout</a>
 
 		<!-- Modal -->

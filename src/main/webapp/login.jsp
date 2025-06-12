@@ -39,6 +39,16 @@
 					}
 					%>
 
+					<%
+					String lgotMsg = (String) session.getAttribute("logoutMsg");
+					if (lgotMsg != null) {
+					%>
+					<div class="alert alert-success" role="alert"><%=lgotMsg%></div>
+					<%
+					session.removeAttribute("logoutMsg");
+					}
+					%>
+
 					<div class="card-body">
 						<form action="LoginServlet" method="post">
 							<div class="form-group">
