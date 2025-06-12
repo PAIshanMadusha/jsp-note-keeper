@@ -32,6 +32,7 @@
 				<i class="fa fa-book mr-1" aria-hidden="true"></i>NOTE-KEEPER: SAVE
 				YOUR NOTES
 			</h1>
+
 			<a href="login.jsp" class="btn btn-light"><i
 				class="fa fa-sign-in mr-1" aria-hidden="true"></i>LogIn</a> <a
 				href="register.jsp" class="btn btn-light"><i

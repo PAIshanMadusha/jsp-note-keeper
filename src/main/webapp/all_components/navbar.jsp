@@ -11,26 +11,40 @@
 
 	<div class="collapse navbar-collapse" id="navbarSupportedContent">
 		<ul class="navbar-nav mr-auto">
-			<li class="nav-item active"><a class="nav-link" href="index.jsp"><i
+			<li class="nav-item active">
+				<%
+				UserDetails user = (UserDetails) session.getAttribute("userD");
+				if (user != null) {
+				%> <a class="nav-link" href="home.jsp"> <i
 					class="fa fa-home mr-1" aria-hidden="true"></i>Home <span
-					class="sr-only">(current)</span></a></li>
-			<li class="nav-item"><a class="nav-link" href="addNotes.jsp"><i
-					class="fa fa-plus mr-1" aria-hidden="true"></i>Add Notes</a></li>
-			<li class="nav-item"><a class="nav-link" href="#"><i
-					class="fa fa-sticky-note mr-1" aria-hidden="true"></i>Show Notes</a></li>
+					class="sr-only">(current)</span>
+			</a> <%
+ } else {
+ %> <a class="nav-link" href="index.jsp"> <i
+					class="fa fa-home mr-1" aria-hidden="true"></i>Home <span
+					class="sr-only">(current)</span>
+			</a> <%
+ }
+ %>
+			</li>
+			<li class="nav-item"><a class="nav-link" href="addNotes.jsp">
+					<i class="fa fa-plus mr-1" aria-hidden="true"></i>Add Notes
+			</a></li>
+			<li class="nav-item"><a class="nav-link" href="showNotes.jsp"> <i
+					class="fa fa-sticky-note mr-1" aria-hidden="true"></i>Show Notes
+			</a></li>
 		</ul>
 
 		<%
-		UserDetails user = (UserDetails) session.getAttribute("userD");
-
 		if (user != null) {
 		%>
+		<!-- Profile and Logout buttons -->
 		<a class="btn btn-light my-2 my-sm-0 mr-3" data-toggle="modal"
-			data-target="#exampleModal" type="submit"><i
-			class="fa fa-user-circle-o mr-1" aria-hidden="true"></i> <%=user.getName()%></a>
-			
-		<a href="LogoutServlet" class="btn btn-light my-2 my-sm-0" type="submit"><i
-			class="fa fa-sign-out mr-1" aria-hidden="true"></i>Logout</a>
+			data-target="#exampleModal"> <i class="fa fa-user-circle-o mr-1"
+			aria-hidden="true"></i> <%=user.getName()%>
+		</a> <a href="LogoutServlet" class="btn btn-light my-2 my-sm-0"> <i
+			class="fa fa-sign-out mr-1" aria-hidden="true"></i>Logout
+		</a>
 
 		<!-- Modal -->
 		<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
@@ -38,40 +52,32 @@
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h5 class="modal-title" id="exampleModalLabel">Profile Details</h5>
+						<h5 class="modal-title" id="exampleModalLabel">Profile
+							Details</h5>
 						<button type="button" class="close" data-dismiss="modal"
 							aria-label="Close">
 							<span aria-hidden="true">&times;</span>
 						</button>
 					</div>
-					<div class="modal-body">
-						<div class="container text-center">
-							<i class="fa fa-user fa-3x"></i>
-							<h5></h5>
-
-							<table class="table">
-								<tbody>
-									<tr>
-										<td>User ID:</td>
-										<td><%=user.getId()%></td>
-									</tr>
-
-									<tr>
-										<td>Full Name:</td>
-										<td><%=user.getName()%></td>
-									</tr>
-
-									<tr>
-										<td>Email:</td>
-										<td><%=user.getEmail()%></td>
-									</tr>
-								</tbody>
-							</table>
-							<div>
-								<button type="button" class="btn btn-primary"
-									data-dismiss="modal">Close</button>
-							</div>
-						</div>
+					<div class="modal-body text-center">
+						<i class="fa fa-user fa-3x mb-3"></i>
+						<table class="table table-bordered">
+							<tbody>
+								<tr>
+									<td>User ID:</td>
+									<td><%=user.getId()%></td>
+								</tr>
+								<tr>
+									<td>Full Name:</td>
+									<td><%=user.getName()%></td>
+								</tr>
+								<tr>
+									<td>Email:</td>
+									<td><%=user.getEmail()%></td>
+								</tr>
+							</tbody>
+						</table>
+						<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
 					</div>
 				</div>
 			</div>
@@ -79,10 +85,12 @@
 		<%
 		} else {
 		%>
-		<a href="login.jsp" class="btn btn-light my-2 my-sm-0 mr-3"
-			type="submit"><i class="fa fa-sign-in mr-1" aria-hidden="true"></i>LogIn</a>
-		<a href="register.jsp" class="btn btn-light my-2 my-sm-0"
-			type="submit"><i class="fa fa-user-plus mr-1" aria-hidden="true"></i>Register</a>
+		<!-- Login and Register buttons -->
+		<a href="login.jsp" class="btn btn-light my-2 my-sm-0 mr-3"> <i
+			class="fa fa-sign-in mr-1" aria-hidden="true"></i>LogIn
+		</a> <a href="register.jsp" class="btn btn-light my-2 my-sm-0"> <i
+			class="fa fa-user-plus mr-1" aria-hidden="true"></i>Register
+		</a>
 		<%
 		}
 		%>
