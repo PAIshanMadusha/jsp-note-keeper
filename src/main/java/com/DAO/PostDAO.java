@@ -102,4 +102,20 @@ public class PostDAO {
 		}
 		return f;
 	}
+	
+	public boolean postDelete(int noteId) {
+		boolean f = false;
+		try {
+			String q = "delete from post where id=?";
+			PreparedStatement ps = conn.prepareStatement(q);
+			ps.setInt(1, noteId);
+			int x = ps.executeUpdate();
+			if(x == 1) {
+				f = true; 
+			}
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		return f;
+	}
 }

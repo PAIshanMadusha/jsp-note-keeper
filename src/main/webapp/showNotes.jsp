@@ -31,6 +31,15 @@ if (user3 == null) {
 	session.removeAttribute("updateMsg");
 	}
 	%>
+	<%
+	String deleteFaildMsg = (String) session.getAttribute("deleteFaildMsg");
+	if (deleteFaildMsg != null) {
+	%>
+		<div class="alert alert-danger" role="alert"><%=deleteFaildMsg%></div>
+	<%
+	session.removeAttribute("deleteFaildMsg");
+	}
+	%>
 	<div class="container  my-4">
 		<h2 class="text-center mb-4">📝 View Your All Notes</h2>
 		<div class="row">
@@ -59,7 +68,7 @@ if (user3 == null) {
 						</ul>
 
 						<div class="container text-center mt-2">
-							<a href="#" class="btn btn-outline-danger mr-2 px-4"> <i
+							<a href="DeleteServlet?note_id=<%=onePost.getId()%>" class="btn btn-outline-danger mr-2 px-4"> <i
 								class="fa fa-trash mr-1"></i> Delete
 							</a> <a href="edit.jsp?note_id=<%=onePost.getId()%>"
 								class="btn btn-outline-primary px-4"> <i
