@@ -39,7 +39,7 @@
 		if (user != null) {
 		%>
 		<!-- Profile and Logout buttons -->
-		<a class="btn btn-light my-2 my-sm-0 mr-3" data-toggle="modal"
+		<a class="btn btn-light my-2 my-sm-0 mr-2" data-toggle="modal"
 			data-target="#exampleModal"> <i class="fa fa-user-circle-o mr-1"
 			aria-hidden="true"></i> <%=user.getName()%>
 		</a> <a href="LogoutServlet" class="btn btn-light my-2 my-sm-0"> <i
@@ -86,7 +86,7 @@
 		} else {
 		%>
 		<!-- Login and Register buttons -->
-		<a href="login.jsp" class="btn btn-light my-2 my-sm-0 mr-3"> <i
+		<a href="login.jsp" class="btn btn-light my-2 my-sm-0 mr-2"> <i
 			class="fa fa-sign-in mr-1" aria-hidden="true"></i>LogIn
 		</a> <a href="register.jsp" class="btn btn-light my-2 my-sm-0"> <i
 			class="fa fa-user-plus mr-1" aria-hidden="true"></i>Register

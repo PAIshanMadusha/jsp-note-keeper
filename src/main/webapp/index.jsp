@@ -26,14 +26,14 @@
 	System.out.print(conn);
 	%>
 
-	<div class="container-fluid back-img">
+	<div class="container-fluid back-img d-flex align-items-center justify-content-center">
 		<div class="text-center">
 			<h1 class="text-white">
 				<i class="fa fa-book mr-1" aria-hidden="true"></i>NOTE-KEEPER: SAVE
 				YOUR NOTES
 			</h1>
 
-			<a href="login.jsp" class="btn btn-light"><i
+			<a href="login.jsp" class="btn btn-light mr-1"><i
 				class="fa fa-sign-in mr-1" aria-hidden="true"></i>LogIn</a> <a
 				href="register.jsp" class="btn btn-light"><i
 				class="fa fa-user-plus mr-1" aria-hidden="true"></i>Register</a>

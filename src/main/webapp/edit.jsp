@@ -33,7 +33,7 @@ if (user1 == null) {
 
 		<%@include file="all_components/navbar.jsp"%>
 
-		<h1 class="text-center mt-3">Edit Your Notes</h1>
+		<h1 class="text-center mt-3">📝 Edit Your Notes</h1>
 
 		<div class="container">
 			<div class="row">

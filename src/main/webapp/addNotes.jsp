@@ -23,7 +23,7 @@
 
 		<%@include file="all_components/navbar.jsp"%>
 
-		<h1 class="text-center mt-3">Add Your Notes</h1>
+		<h1 class="text-center mt-3">📝 Add Your Notes</h1>
 
 		<div class="container">
 			<div class="row">

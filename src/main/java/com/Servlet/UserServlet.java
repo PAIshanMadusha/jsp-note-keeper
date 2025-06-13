@@ -1,6 +1,5 @@
 package com.Servlet;
 import java.io.IOException;
-import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -15,6 +14,9 @@ import com.User.UserDetails;
 
 @WebServlet("/UserServlet")
 public class UserServlet extends HttpServlet {
+	
+	private static final long serialVersionUID = 1L;
+
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		String name = request.getParameter("fname");
