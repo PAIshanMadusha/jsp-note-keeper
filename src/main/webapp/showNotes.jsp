@@ -22,6 +22,15 @@ if (user3 == null) {
 </head>
 <body>
 	<%@include file="all_components/navbar.jsp"%>
+	<%
+	String updateMsg = (String) session.getAttribute("updateMsg");
+	if (updateMsg != null) {
+	%>
+		<div class="alert alert-success" role="alert"><%=updateMsg%></div>
+	<%
+	session.removeAttribute("updateMsg");
+	}
+	%>
 	<div class="container  my-4">
 		<h2 class="text-center mb-4">📝 View Your All Notes</h2>
 		<div class="row">
@@ -52,7 +61,8 @@ if (user3 == null) {
 						<div class="container text-center mt-2">
 							<a href="#" class="btn btn-outline-danger mr-2 px-4"> <i
 								class="fa fa-trash mr-1"></i> Delete
-							</a> <a href="#" class="btn btn-outline-primary px-4"> <i
+							</a> <a href="edit.jsp?note_id=<%=onePost.getId()%>"
+								class="btn btn-outline-primary px-4"> <i
 								class="fa fa-edit mr-1"></i> Edit
 							</a>
 						</div>
